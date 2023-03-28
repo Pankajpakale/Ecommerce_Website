@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{%endblock title %}
+{% block main-content %}
+<class="container my-5">
+  <div class="row">
+    <h3>Welcome{{request.user.username|capfirst}}</h3>
+    <div class="col-sm-2 border-end">
+      <ul class="list-unstyled">
+        <li class="d-grid">
+          <a href="{% url 'showcart' %}" class="btn btn-primary">Your order placed successfully
+            </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-sm-9 offset-sm-1 text-center">
+      <h3>Thank you !!!</h3>
+      <h4>Visit again.....</h4>
+    
+    </div>
+   </div>
+</div>
+
+{% endblock main-content%} 
